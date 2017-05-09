@@ -28,7 +28,7 @@ trials = 1000
 
 for i in range(trials):
     shuffle(people)
-    print(people)
+    #print(people)
     for j in range(11):
         #print(people[j] + people[j+1] + people[j+2] + people[j+3])
         if (people[j] + people[j+1] + people[j+2] + people[j+3] + people[j+4]) == 'SSTSS':
