@@ -24,7 +24,7 @@ people = ['T', 'T', 'T', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 
 
 successes = 0
 amount = 0
-trials = 10
+trials = 1000
 
 for i in range(trials):
     shuffle(people)
