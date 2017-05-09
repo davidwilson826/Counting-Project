@@ -17,7 +17,7 @@ for i in range(trials):
         
 print((trials-failures)/trials*100, '%')
 '''
-
+'''
 from random import shuffle, randint
 
 people = ['T', 'T', 'T', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S']
@@ -39,27 +39,22 @@ for i in range(trials):
     amount = 0
         
 print((successes)/trials*100, '%')
-
 '''
+
 from random import shuffle, randint
 
-people = ['T', 'T', 'T', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S']
+cards = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E']
 
-successes = 0
-amount = 0
-trials = 10
+failures = 0
+trials = 1000
 
 for i in range(trials):
-    shuffle(people)
-    print(people)
-    peoplestring = ''
-    for x in range(15):
-        peoplestring += people[x]
-    print(peoplestring)
-    if peoplestring.count('SSTSS') == 3:
-        print('success')
-        successes += 1
-    #people = ['T', 'T', 'T', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S']
-
-print((successes)/trials*100, '%')
-'''
+    shuffle(cards)
+    #print(cards)
+    for j in range(9):
+        #print(cards[j] + cards[j+1] + cards[j+2] + cards[j+3])
+        if (cards[j] + cards[j+1] + cards[j+2] + cards[j+3]) in ['JJJJ', 'QQQQ', 'KKKK']:
+            failures += 1
+            break
+        
+print((trials-failures)/trials*100, '%')
