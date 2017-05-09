@@ -22,16 +22,18 @@ from random import shuffle, randint
 
 people = ['T', 'T', 'T', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S']
 
-failures = 0
+successes = 0
+amount = 0
 trials = 1000
 
 for i in range(trials):
     shuffle(people)
     #print(people)
-    for j in range(9):
+    for j in range(10):
         #print(people[j] + people[j+1] + people[j+2] + people[j+3])
-        if (people[j] + people[j+1] + people[j+2] + people[j+3]) in ['JJJJ', 'QQQQ', 'KKKK']:
-            failures += 1
-            break
+        if (people[j] + people[j+1] + people[j+2] + people[j+3] + people[j+4]) == 'SSTSS':
+            amount += 1
+        if amount == 3:
+            successes += 1
         
-print((trials-failures)/trials*100, '%')
+print((successes)/trials*100, '%')
