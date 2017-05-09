@@ -17,29 +17,30 @@ for i in range(trials):
         
 print((trials-failures)/trials*100, '%')
 '''
-'''
+
 from random import shuffle, randint
 
 people = ['T', 'T', 'T', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S']
 
 successes = 0
 amount = 0
-trials = 10
+trials = 1
 
 for i in range(trials):
     shuffle(people)
     print(people)
-    for j in range(10):
+    for j in range(11):
         #print(people[j] + people[j+1] + people[j+2] + people[j+3])
         if (people[j] + people[j+1] + people[j+2] + people[j+3] + people[j+4]) == 'SSTSS':
             amount += 1
+            print(amount)_
         if amount == 3:
             successes += 1
         amount = 0
         
 print((successes)/trials*100, '%')
-'''
 
+'''
 from random import shuffle, randint
 
 people = ['T', 'T', 'T', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S']
@@ -51,9 +52,14 @@ trials = 10
 for i in range(trials):
     shuffle(people)
     print(people)
-    ''.join(people)
-    if people.find('SSTSS') == 3:
+    peoplestring = ''
+    for x in range(15):
+        peoplestring += people[x]
+    print(peoplestring)
+    if peoplestring.count('SSTSS') == 3:
+        print('success')
         successes += 1
-    people = ['T', 'T', 'T', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S']
+    #people = ['T', 'T', 'T', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S']
 
 print((successes)/trials*100, '%')
+'''
