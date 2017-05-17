@@ -49,7 +49,7 @@ for i in range(trials):
     shuffle(siblings)
     print(siblings)
     for j in range(9):
-        if cards[j] == cards[j+1]:
+        if siblings[j] == siblings[j+1]:
             pairs += 1
         
 print(pairs/trials, 'pairs')
