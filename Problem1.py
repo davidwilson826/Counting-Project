@@ -22,18 +22,18 @@ from random import shuffle, randint
 people = ['T', 'T', 'T', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S']
 
 successes = 0
-sstss = 0
-trials = 10
+num_SSTSS = 0
+trials = 1000
 
 for i in range(trials):
     shuffle(people)
-    print(people)
+    #print(people)
     for j in range(11):
         if (people[j] + people[j+1] + people[j+2] + people[j+3] + people[j+4]) == 'SSTSS':
-            sstss += 1
-    if sstss == 3:
+            num_SSTSS += 1
+    if num_SSTSS == 3:
         successes += 1
-    sstss = 0
+    num_SSTSS = 0
         
 print((successes)/trials*100, '%')
 
