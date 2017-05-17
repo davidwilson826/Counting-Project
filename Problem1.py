@@ -16,7 +16,7 @@ for i in range(trials):
         
 print((trials-failures)/trials*100, '%')
 '''
-
+'''
 from random import shuffle, randint
 
 people = ['T', 'T', 'T', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S']
@@ -36,23 +36,21 @@ for i in range(trials):
     num_SSTSS = 0
         
 print((successes)/trials*100, '%')
-
 '''
+
 from random import shuffle, randint
 
-cards = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E']
+siblings = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E']
 
-failures = 0
-trials = 1000
+pairs = 0
+trials = 10
 
 for i in range(trials):
-    shuffle(cards)
-    #print(cards)
+    shuffle(siblings)
+    print(siblings)
     for j in range(9):
-        #print(cards[j] + cards[j+1] + cards[j+2] + cards[j+3])
-        if (cards[j] + cards[j+1] + cards[j+2] + cards[j+3]) in ['JJJJ', 'QQQQ', 'KKKK']:
-            failures += 1
-            break
+        if cards[j] == cards[j+1]:
+            pairs += 1
         
-print((trials-failures)/trials*100, '%')
-'''
+print(pairs/trials, 'pairs')
+
