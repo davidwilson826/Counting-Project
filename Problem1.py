@@ -43,11 +43,11 @@ from random import shuffle, randint
 siblings = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D', 'E', 'E']
 
 pairs = 0
-trials = 10
+trials = 1000
 
 for i in range(trials):
     shuffle(siblings)
-    print(siblings)
+    #print(siblings)
     for j in range(9):
         if siblings[j] == siblings[j+1]:
             pairs += 1
