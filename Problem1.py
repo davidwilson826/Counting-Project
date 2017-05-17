@@ -23,11 +23,11 @@ people = ['T', 'T', 'T', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 
 
 successes = 0
 sstss = 0
-trials = 1000
+trials = 10
 
 for i in range(trials):
     shuffle(people)
-    #print(people)
+    print(people)
     for j in range(11):
         if (people[j] + people[j+1] + people[j+2] + people[j+3] + people[j+4]) == 'SSTSS':
             sstss += 1
